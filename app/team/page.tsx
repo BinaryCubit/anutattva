@@ -13,22 +13,22 @@ const teamMembers: TeamMember[] = [
     {
         name: "Mr. Aman Kumar",
         role: "Director",
-        imageUrl: "/images/team1.jpeg",
+        imageUrl: "/Images/team1.jpeg",
     },
     {
         name: "Mr. Sunil Kumar",
         role: "CEO",
-        imageUrl: "/images/team2.jpeg",
+        imageUrl: "/Images/team2.jpeg",
     },
     {
         name: "Mr. Sajid Khan",
         role: "Chief Marketing Offier",
-        imageUrl: "/images/team3.png",
+        imageUrl: "/Images/team3.png",
     },
     {
         name: "Mr. Avinash Sood",
         role: "CTO and Sr. Lead Trainer ( Ex- IBM, CDAC and IBM certified Data Science and Quantum Expert)",
-        imageUrl: "/images/team4.jpeg",
+        imageUrl: "/Images/team4.jpeg",
     },
 ];
 
