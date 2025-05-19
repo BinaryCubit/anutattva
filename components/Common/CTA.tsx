@@ -26,7 +26,7 @@ const CTA: React.FC = () => {
                 {/* Right Column - Image or Illustration */}
                 <div className="text-center">
                     <Image
-                        src="../Images/banner/cta.jpg"
+                        src="/Images/banner/cta.jpg"
                         alt="Future Skills Illustration"
                         width={1000}
                         height={1000}
