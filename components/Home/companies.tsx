@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import React, { Component } from "react";
+import React from "react";
 
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";

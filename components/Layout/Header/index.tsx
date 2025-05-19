@@ -1,4 +1,4 @@
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetContent,  SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Headerlinks } from '@/static/links'
 import { Menu } from 'lucide-react'
 import Image from 'next/image'

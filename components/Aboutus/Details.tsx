@@ -17,9 +17,9 @@ const Details = () => {
                         <p>We believe that quality education should be accessible, practical, and career-oriented. Our programs are designed by industry experts, academic scholars, and passionate educators who bring deep domain knowledge and real-time project experience to the classroom.</p>
                         <br />
 
-                        <p>Rooted in the philosophy of Anutattva, meaning "the ultimate subtle truth," we believe in providing education that is both deeply insightful and practically impactful. Our mission is to bridge the gap between academic theory and industry application by offering programs designed by top professionals, researchers, and educators.</p>
+                        <p>Rooted in the philosophy of Anutattva, meaning the ultimate subtle truth, we believe in providing education that is both deeply insightful and practically impactful. Our mission is to bridge the gap between academic theory and industry application by offering programs designed by top professionals, researchers, and educators.</p>
                         <br />
-                        <p>Whether you're a student, a job seeker, or a working professional, our flexible learning paths help you master high-demand technologies, build job-ready portfolios, and unlock opportunities in top companies and research institutions.</p>
+                        <p>Whether you are a student, a job seeker, or a working professional, our flexible learning paths help you master high-demand technologies, build job-ready portfolios, and unlock opportunities in top companies and research institutions.</p>
                         <br />
                         <h2 className='text-xl'>Why Choose Anutattva Foundation?</h2>
                         <ul className='pl-10'>
@@ -31,7 +31,7 @@ const Details = () => {
                             <li>✅ Access to Advanced Tech Domains like Quantum AI and Full Stack Engineering</li>
                         </ul>
                         <br />
-                        <p>At Anutattva Foundation, we’re not just teaching — we’re shaping innovators, problem solvers, and leaders of tomorrow. Whether you're beginning your journey or looking to advance your career, we are here to guide, support, and inspire you every step of the way.</p>
+                        <p>At Anutattva Foundation, we are not just teaching — we are shaping innovators, problem solvers, and leaders of tomorrow. Whether you're beginning your journey or looking to advance your career, we are here to guide, support, and inspire you every step of the way.</p>
                     </div>
                     <Image src="/Images/banner/banner.jpg" alt="" width={600} height={600} className='rounded-xl shadow-md' />
                 </div>

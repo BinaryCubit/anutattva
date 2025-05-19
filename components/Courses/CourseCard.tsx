@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type CourseProps = {
@@ -19,9 +20,11 @@ const CourseCard: React.FC<CourseProps> = ({
 }) => {
     return (
         <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition duration-300">
-            <img
+            <Image
                 src={imageUrl}
                 alt={title}
+                width={1000}
+                height={1000}
                 className="w-full h-48 object-cover rounded-xl mb-4"
             />
             <h2 className="text-xl font-semibold text-gray-800 mb-2">{title}</h2>

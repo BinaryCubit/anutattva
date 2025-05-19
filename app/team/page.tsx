@@ -1,5 +1,6 @@
 import Breadcrump from "@/components/Common/Breadcrumb";
 import CTA from "@/components/Common/CTA";
+import Image from "next/image";
 import React from "react";
 
 type TeamMember = {
@@ -78,13 +79,13 @@ const TeamPage: React.FC = () => {
                         {/* Director's Message */}
                         <div className="bg-white p-8 rounded-2xl shadow-md">
                             <h3 className="text-2xl font-semibold text-blue-700 mb-4">
-                                Director's Message
+                                Director&apos;s Message
                             </h3>
                             <p className="text-gray-700 leading-relaxed mb-6">
                                 At <strong>Anutattva Foundation</strong>, we believe that education is
                                 the most powerful tool for transformation. Our mission is to create a
                                 learning ecosystem that nurtures creativity, fosters innovation, and
-                                equips individuals with the skills needed for tomorrow’s challenges.
+                                equips individuals with the skills needed for tomorrow&apos;s challenges.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-6">
                                 From Artificial Intelligence to Quantum Computing, our courses are
@@ -101,9 +102,11 @@ const TeamPage: React.FC = () => {
                                     key={member.name}
                                     className="bg-white p-6 rounded-xl shadow flex items-center gap-4"
                                 >
-                                    <img
+                                    <Image
                                         src={member.imageUrl}
                                         alt={member.name}
+                                        width={600}
+                                        height={600}
                                         className="w-32 h-32 rounded-xl object-cover"
                                     />
                                     <div>
@@ -129,9 +132,11 @@ const TeamPage: React.FC = () => {
                                     key={member.name}
                                     className="bg-white p-6 rounded-xl shadow flex flex-col items-center gap-4 text-center"
                                 >
-                                    <img
+                                    <Image
                                         src={member.imageUrl}
                                         alt={member.name}
+                                        width={600}
+                                        height={600}
                                         className="w-full h-96 rounded-xl"
                                     />
                                     <div>

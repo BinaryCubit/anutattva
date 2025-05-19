@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface GalleryItem {
@@ -45,9 +46,11 @@ const Gallery: React.FC = () => {
               key={index}
               className="overflow-hidden rounded-xl shadow hover:shadow-lg transition"
             >
-              <img
+              <Image
                 src={item.src}
                 alt={item.alt}
+                width={1000}
+                height={1000}
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>

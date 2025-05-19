@@ -1,4 +1,4 @@
-import { NotebookTabs } from 'lucide-react'
+
 import React from 'react'
 
 const PrivacyDetails = () => {

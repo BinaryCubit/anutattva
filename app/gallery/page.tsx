@@ -1,6 +1,7 @@
 import Breadcrump from "@/components/Common/Breadcrumb";
 import CTA from "@/components/Common/CTA";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
+import Image from "next/image";
+
 import React from "react";
 
 const images: { src: string; alt?: any }[] = [
@@ -29,7 +30,7 @@ const links = [
 const MasonryGallery: React.FC = () => {
     return (
         <div>
-            <Breadcrump title="Gallery" links={ links} page="gallery" />
+            <Breadcrump title="Gallery" links={links} page="gallery" />
 
             <section className="bg-white py-16 px-6">
                 <div className="max-w-7xl mx-auto">
@@ -38,10 +39,12 @@ const MasonryGallery: React.FC = () => {
                     </h2>
                     <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
                         {images.map((img, i) => (
-                            <img
+                            <Image
                                 key={i}
                                 src={img.src}
                                 alt={img.alt || `Gallery image ${i + 1}`}
+                                width={600}
+                                height={600}
                                 className="rounded-xl w-full object-cover break-inside-avoid shadow-md hover:scale-105 transition duration-300"
                                 loading="lazy"
                             />
@@ -49,7 +52,7 @@ const MasonryGallery: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <CTA/>
+            <CTA />
         </div>
     );
 };

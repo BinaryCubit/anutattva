@@ -12,7 +12,7 @@ const QuantumComputingCourseDetails = () => {
                 </p>
                 <br />
                 <p>
-                The course begins with foundational topics like qubits, superposition, entanglement, and quantum gates, then moves into quantum algorithms (like Grover's and Shor's), quantum circuits, and quantum programming with platforms like Qiskit (IBM), PennyLane, and Cirq (Google).
+                The course begins with foundational topics like qubits, superposition, entanglement, and quantum gates, then moves into quantum algorithms (like Grover&apos;s and Shor&apos;s), quantum circuits, and quantum programming with platforms like Qiskit (IBM), PennyLane, and Cirq (Google).
                 </p>
                 <br />
                 <p>You will also explore Quantum Machine Learning, where quantum computing is applied to accelerate data processing and model training, covering techniques like quantum-enhanced classification, clustering, and variational circuits.</p>
