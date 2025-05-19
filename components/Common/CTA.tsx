@@ -16,7 +16,7 @@ const CTA: React.FC = () => {
                         Learn from industry experts and transform your career.
                     </p>
                     <a
-                        href="/apply"
+                        href="tel:8398948765"
                         className="inline-block bg-orange-500 text-white font-semibold text-lg px-8 py-3 rounded-full shadow hover:bg-orange-600 transition"
                     >
                         Enroll Now
