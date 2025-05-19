@@ -39,7 +39,7 @@ const Footer = () => {
                     <div className='space-y-5'>
                         <h2 className='text-bold text-xl '>Connect With us</h2>
                         <p className='flex items-center gap-2'><Home /> 722/17 Nai Basti, Gurgaon, Haryana-122001</p>
-                        <p className='flex items-center gap-2'><Mail /> info@anutattvafoundation.com</p>
+                        <p className='flex items-center gap-2'><Mail /> info@anutattvafoundation.in</p>
                         <p className='flex items-center gap-2'><Phone /> +91-8398948765, +91-7988007320</p>
                     </div>
 
