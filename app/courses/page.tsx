@@ -10,7 +10,7 @@ const courses = [
             "Master AI concepts, algorithms, and machine learning techniques using Python, TensorFlow, and Scikit-learn.",
         duration: "10-12 Months",
         level: "Intermediate to Advanced",
-        imageUrl: "/images/courses/aiml.jpeg",
+        imageUrl: "/Images/courses/aiml.jpeg",
         link: "/courses/aiml",
     },
     {
@@ -19,7 +19,7 @@ const courses = [
             "Comprehensive training in statistics, data analysis, machine learning, and visualization tools like Power BI & Tableau.",
         duration: "7-8 Months",
         level: "Beginner to Advanced",
-        imageUrl: "/images/courses/data-science.jpeg",
+        imageUrl: "/Images/courses/data-science.jpeg",
         link: "/courses/data-science",
     },
     {
@@ -28,7 +28,7 @@ const courses = [
             "Learn data cleaning, analysis, and visualization using Excel, SQL, Python, Power BI, and Tableau.",
         duration: "6 Months",
         level: "Beginner",
-        imageUrl: "/images/courses/data-analytics.jpeg",
+        imageUrl: "/Images/courses/data-analytics.jpeg",
         link: "/courses/data-analytics",
     },
     {
@@ -37,7 +37,7 @@ const courses = [
             "Become a full stack developer with a choice of Java, MERN, MEAN, or Laravel stack with live project experience.",
         duration: "6 Months",
         level: "Beginner to Intermediate",
-        imageUrl: "/images/courses/full-stack.jpg",
+        imageUrl: "/Images/courses/full-stack.jpg",
         link: "/courses/full-stack-web-development",
     },
     {
@@ -46,7 +46,7 @@ const courses = [
             "Dive into the future of tech with Qiskit, PennyLane, and real quantum algorithms for AI and optimization.",
         duration: "8-9 Months",
         level: "Advanced",
-        imageUrl: "/images/courses/quantum-computing.jpeg",
+        imageUrl: "/Images/courses/quantum-computing.jpeg",
         link: "/courses/quantum-computing",
     },
 ];
