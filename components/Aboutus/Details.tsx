@@ -31,7 +31,7 @@ const Details = () => {
                             <li>✅ Access to Advanced Tech Domains like Quantum AI and Full Stack Engineering</li>
                         </ul>
                         <br />
-                        <p>At Anutattva Foundation, we are not just teaching — we are shaping innovators, problem solvers, and leaders of tomorrow. Whether you're beginning your journey or looking to advance your career, we are here to guide, support, and inspire you every step of the way.</p>
+                        <p>At Anutattva Foundation, we are not just teaching — we are shaping innovators, problem solvers, and leaders of tomorrow. Whether you are beginning your journey or looking to advance your career, we are here to guide, support, and inspire you every step of the way.</p>
                     </div>
                     <Image src="/Images/banner/banner.jpg" alt="" width={600} height={600} className='rounded-xl shadow-md' />
                 </div>

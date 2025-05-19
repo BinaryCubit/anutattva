@@ -4,17 +4,17 @@ import Image from "next/image";
 
 import React from "react";
 
-const images: { src: string; alt?: any }[] = [
+const images: { src: string; alt?: string }[] = [
 
-    { "src": "https://i.ibb.co/pBnYTDzN/ffa19516-2d43-4add-b9f2-4a9e17d84a85.jpg", "alt": null },
-    { "src": "https://i.ibb.co/wh4jP8x9/f999c51a-71e5-450b-ada6-f269d24f65b8.jpg", "alt": null },
-    { "src": "https://i.ibb.co/8ntqWWqP/a509151e-43b1-4abd-95fc-800e55b2dbdb.jpg", "alt": null },
-    { "src": "https://i.ibb.co/jZJ96wbS/f8bfcbcd-3848-4775-8df9-188d6d79ea51.jpg", "alt": null },
+    { "src": "https://i.ibb.co/pBnYTDzN/ffa19516-2d43-4add-b9f2-4a9e17d84a85.jpg", "alt": "Workshop Event" },
+    { "src": "https://i.ibb.co/wh4jP8x9/f999c51a-71e5-450b-ada6-f269d24f65b8.jpg", "alt": "Workshop Event" },
+    { "src": "https://i.ibb.co/8ntqWWqP/a509151e-43b1-4abd-95fc-800e55b2dbdb.jpg", "alt": "Workshop Event" },
+    { "src": "https://i.ibb.co/jZJ96wbS/f8bfcbcd-3848-4775-8df9-188d6d79ea51.jpg", "alt": "Workshop Event" },
 
 
 
-    { "src": "https://i.ibb.co/z389gBF/7146a478-3287-490f-9b37-77e9cf367e40.jpg", "alt": null },
-    { "src": "https://i.ibb.co/Wvy9tV0R/0219495f-6732-4572-bb19-ceb6467ae258.jpg", "alt": null },
+    { "src": "https://i.ibb.co/z389gBF/7146a478-3287-490f-9b37-77e9cf367e40.jpg", "alt": "Workshop Event" },
+    { "src": "https://i.ibb.co/Wvy9tV0R/0219495f-6732-4572-bb19-ceb6467ae258.jpg", "alt": "Workshop Event" },
 
 
 
