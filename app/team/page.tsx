@@ -13,7 +13,7 @@ const teamMembers: TeamMember[] = [
     {
         name: "Mr. Aman Kumar",
         role: "Director",
-        imageUrl: "/Images/team1.jpeg",
+        imageUrl: "/Images/team1.png",
     },
     {
         name: "Mr. Sunil Kumar",
@@ -42,7 +42,7 @@ const Trainers: Trainer[] = [
     {
         name: "Mr. Rahul Kumar",
         role: "Microsoft and Google Certified DevOps Expert",
-        imageUrl: "/Images/trainer1.jpg",
+        imageUrl: "/Images/trainer1.jpeg",
     },
     {
         name: "Mr. Himanshu Arora",
@@ -54,19 +54,19 @@ const Trainers: Trainer[] = [
         role: "IBM Certified MERN Stack Expert",
         imageUrl: "/Images/trainer3.jpeg",
     },
-    
+
 ];
 const links = [
     {
         title: "Home",
         link: "/"
     },
-    
+
 ]
 const TeamPage: React.FC = () => {
     return (
         <div>
-            <Breadcrump title="Our Team" links={links} page="team"/>
+            <Breadcrump title="Our Team" links={links} page="team" />
             <section className="bg-gray-50 py-16 px-6 md:px-12">
                 <div className="max-w-7xl mx-auto">
                     {/* Title */}
@@ -122,34 +122,34 @@ const TeamPage: React.FC = () => {
                 </div>
             </section>
             <section className="bg-gray-400 py-16 px-6 md:px-12 space-y-5">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h1 className="text-2xl text-bold">Our Trainers</h1>
-                        <p>More Than Trainers – They’re Your Growth Partners.</p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-4 gap-4 ">
+                <div className="max-w-3xl mx-auto text-center">
+                    <h1 className="text-2xl text-bold">Our Trainers</h1>
+                    <p>More Than Trainers – They’re Your Growth Partners.</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-4 gap-4 ">
                     {Trainers.map((member) => (
-                                <div
-                                    key={member.name}
-                                    className="bg-white p-6 rounded-xl shadow flex flex-col items-center gap-4 text-center"
-                                >
-                                    <Image
-                                        src={member.imageUrl}
-                                        alt={member.name}
-                                        width={600}
-                                        height={600}
-                                        className="w-full h-96 rounded-xl"
-                                    />
-                                    <div>
-                                        <h4 className="text-lg font-semibold text-gray-800">
-                                            {member.name}
-                                        </h4>
-                                        <p className="text-sm text-gray-500">{member.role}</p>
-                                    </div>
-                                </div>
-                            ))}
-                    </div>
+                        <div
+                            key={member.name}
+                            className="bg-white p-6 rounded-xl shadow flex flex-col items-center gap-4 text-center"
+                        >
+                            <Image
+                                src={member.imageUrl}
+                                alt={member.name}
+                                width={600}
+                                height={600}
+                                className="w-full h-96 rounded-xl"
+                            />
+                            <div>
+                                <h4 className="text-lg font-semibold text-gray-800">
+                                    {member.name}
+                                </h4>
+                                <p className="text-sm text-gray-500">{member.role}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </section>
-            <CTA/>
+            <CTA />
         </div>
     );
 };
