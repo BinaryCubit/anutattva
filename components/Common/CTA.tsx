@@ -1,7 +1,11 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "../ui/button";
+import EnrollNow from "./EnrollNow";
 
 const CTA: React.FC = () => {
+    const [open,setOpen] = useState(false);
     return (
         <section className="bg-[#fdf6ee] py-20 px-6">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12">
@@ -15,12 +19,12 @@ const CTA: React.FC = () => {
                         Intelligence, Data Science, Full Stack Development, and Quantum Computing.
                         Learn from industry experts and transform your career.
                     </p>
-                    <a
-                        href="tel:8398948765"
-                        className="inline-block bg-orange-500 text-white font-semibold text-lg px-8 py-3 rounded-full shadow hover:bg-orange-600 transition"
+                    <Button
+                        onClick={()=>setOpen(true)}
+                        className="bg-orange-500 text-white font-semibold text-lg  rounded-full shadow hover:bg-orange-600 transition"
                     >
                         Enroll Now
-                    </a>
+                    </Button>
                 </div>
 
                 {/* Right Column - Image or Illustration */}
@@ -33,6 +37,7 @@ const CTA: React.FC = () => {
                         className="w-full max-w-md mx-auto rounded-xl"
                     />
                 </div>
+                <EnrollNow Open={open} onChange={setOpen}/>
             </div>
         </section>
     );
