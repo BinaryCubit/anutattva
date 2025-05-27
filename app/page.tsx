@@ -3,7 +3,7 @@ import Courses from "@/components/Home/Courses";
 import FAQs from "@/components/Home/Faq";
 import Hero from "@/components/Home/Hero";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
-import Companies from "@/components/Home/companies";
+
 
 
 export default function Home() {
