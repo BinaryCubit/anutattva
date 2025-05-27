@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Dialog, DialogContent, DialogTitle } from '../ui/dialog'
 
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -48,6 +48,7 @@ interface EnrollNowProps {
 }
 
 const EnrollNow: React.FC<EnrollNowProps> = ({ Open, onChange }) => {
+  const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof enrollFormSchema>>({
     resolver: zodResolver(enrollFormSchema),
     defaultValues: {
@@ -61,6 +62,7 @@ const EnrollNow: React.FC<EnrollNowProps> = ({ Open, onChange }) => {
   })
 
   function onSubmit(values: z.infer<typeof enrollFormSchema>) {
+    setLoading(true)
     const formData = new FormData();
     Object.entries(values).forEach(([key, value]) => {
       if (value !== undefined) {
@@ -85,7 +87,10 @@ const EnrollNow: React.FC<EnrollNowProps> = ({ Open, onChange }) => {
       .catch(err => {
         console.error("Error:", err);
         alert("Network error. Try again.");
-      });
+      }
+
+      ).finally(() => setLoading(false))
+
   }
 
 
@@ -196,7 +201,35 @@ const EnrollNow: React.FC<EnrollNowProps> = ({ Open, onChange }) => {
               )}
             />
 
-            <Button type="submit" className="w-full">Submit</Button>
+            <Button type="submit" disabled={loading}>
+              {loading ? (
+                <>
+                  <svg
+                    className="animate-spin mr-2 h-4 w-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v8H4z"
+                    />
+                  </svg>
+                  Submitting...
+                </>
+              ) : (
+                'Enroll Now'
+              )}
+            </Button>
           </form>
         </Form>
       </DialogContent>
