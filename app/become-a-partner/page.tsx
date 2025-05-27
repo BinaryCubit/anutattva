@@ -32,7 +32,7 @@ export const partnerFormSchema = z.object({
         .optional(),
 });
 
-export type PartnerFormValues = z.infer<typeof partnerFormSchema>;
+
 
 
 import {
@@ -41,7 +41,7 @@ import {
     FormItem,
     FormLabel,
     FormControl,
-    
+
     FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -51,7 +51,7 @@ import Breadcrump from '@/components/Common/Breadcrumb';
 
 const PartnerForm = () => {
     const [loading, setLoading] = useState(false);
-    const form = useForm<PartnerFormValues>({
+    const form = useForm<z.infer<typeof partnerFormSchema>>({
         resolver: zodResolver(partnerFormSchema),
         defaultValues: {
             organizationName: '',
@@ -88,7 +88,7 @@ const PartnerForm = () => {
             } else {
                 alert('Submission failed: ' + data.error);
             }
-        } catch  {
+        } catch {
             alert('Network error. Please try again later.');
         }
         finally {
