@@ -63,7 +63,7 @@ const PartnerForm = () => {
         },
     });
 
-    const onSubmit = async (values: PartnerFormValues) => {
+    const onSubmit = async (values: z.infer<typeof partnerFormSchema>) => {
         setLoading(true);
         const formData = new FormData();
         Object.entries(values).forEach(([key, value]) => {
