@@ -41,7 +41,7 @@ import {
     FormItem,
     FormLabel,
     FormControl,
-    FormDescription,
+    
     FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -88,7 +88,7 @@ const PartnerForm = () => {
             } else {
                 alert('Submission failed: ' + data.error);
             }
-        } catch (error) {
+        } catch  {
             alert('Network error. Please try again later.');
         }
         finally {
