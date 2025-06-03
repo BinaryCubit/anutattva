@@ -16,7 +16,7 @@ export function getAdminFromToken(): AdminTokenPayload | null {
     try {
         const decoded = jwtDecode<AdminTokenPayload>(token);
         return decoded;
-    } catch (e) {
+    } catch {
         console.error('Invalid token');
         return null;
     }
