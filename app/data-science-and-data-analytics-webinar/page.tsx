@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
+
 import { motion } from "framer-motion";
 import { FaPython, FaBrain, FaChartBar, FaUserGraduate } from "react-icons/fa";
 
