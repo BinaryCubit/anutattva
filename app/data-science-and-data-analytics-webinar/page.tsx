@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function WebinarLandingPage() {
     const [submitted, setSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
+    
     const [formData, setFormData] = useState({
         FullName: "",
         Email: "",
@@ -30,7 +30,7 @@ export default function WebinarLandingPage() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault(); // prevent default form submission
-        setLoading(true);
+        
       
         const formDataPayload = new FormData();
         Object.entries(formData).forEach(([key, value]) => {
@@ -39,7 +39,7 @@ export default function WebinarLandingPage() {
         formDataPayload.append("Date", new Date().toLocaleDateString());
       
         try {
-          const response = await fetch(
+          await fetch(
             "https://script.google.com/macros/s/AKfycbxdR6n8YB6sfVTcqYD3pxzjS2ePtWYfqx_HNwYgtqt6jT6SXPS_nHTHhz-wNLNxIFi8-g/exec",
             {
               method: "POST",
@@ -52,9 +52,7 @@ export default function WebinarLandingPage() {
         } catch (error) {
           console.error("Form submission failed", error);
           alert("Network error. Try again.");
-        } finally {
-          setLoading(false);
-        }
+        } 
       };
 
 
