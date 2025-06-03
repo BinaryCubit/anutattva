@@ -1,10 +1,16 @@
+'use client'
 import { footerCourseLink, footerQuickLink } from '@/static/links'
 import { Home, Mail, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const Footer = () => {
+    const current = usePathname()
+    if (current === "/admin") {
+        return null;
+    }
     return (
         <div className='bg-[#333333] text-gray-400'>
             <div className='container mx-auto p-10'>

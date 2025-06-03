@@ -1,11 +1,17 @@
+'use client'
 import { Sheet, SheetContent,  SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Headerlinks } from '@/static/links'
 import { Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const Header = () => {
+    const current = usePathname()
+    if (current === "/admin"){
+        return null;
+    }
     return (
         <div className='bg-white shadow-md'>
             <div className='container mx-auto flex items-center px-10 py-3 justify-between  '>
