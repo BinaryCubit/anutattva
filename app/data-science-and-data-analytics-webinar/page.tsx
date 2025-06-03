@@ -1,4 +1,8 @@
 'use client'
+
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,50 +14,45 @@ import { FaPython, FaBrain, FaChartBar, FaUserGraduate } from "react-icons/fa";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import Image from "next/image";
 
+const webinarFormSchema = z.object({
+    FullName: z.string().min(1, "Full Name is required"),
+    Email: z.string().email("Invalid email address"),
+    Mobile: z.string().min(10, "Enter a valid phone number"),
+    City: z.string().min(1, "City is required"),
+    State: z.string().min(1, "State is required"),
+});
+type WebinarFormData = z.infer<typeof webinarFormSchema>;
 export default function WebinarLandingPage() {
-    const [submitted, setSubmitted] = useState(false);
-    
-    const [formData, setFormData] = useState({
-        FullName: "",
-        Email: "",
-        Mobile: "",
-        City: "",
-        State: "",
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm<WebinarFormData>({
+        resolver: zodResolver(webinarFormSchema),
     });
+    const [submitted, setSubmitted] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData((prev) => ({
-            ...prev,
-            [e.target.name]: e.target.value,
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault(); // prevent default form submission
-        
-      
+    const onSubmit = async (data: WebinarFormData) => {
         const formDataPayload = new FormData();
-        Object.entries(formData).forEach(([key, value]) => {
-          formDataPayload.append(key, value);
+        Object.entries(data).forEach(([key, value]) => {
+            formDataPayload.append(key, value);
         });
         formDataPayload.append("Date", new Date().toLocaleDateString());
-      
+
         try {
-          await fetch(
-            "https://script.google.com/macros/s/AKfycbxdR6n8YB6sfVTcqYD3pxzjS2ePtWYfqx_HNwYgtqt6jT6SXPS_nHTHhz-wNLNxIFi8-g/exec",
-            {
-              method: "POST",
-              body: formDataPayload, // ✅ no headers needed
-            }
-          );
-      
-          // Google Apps Script with `no-cors` doesn't return readable data, so we check based on assumptions
-          setSubmitted(true);
+            await fetch("https://script.google.com/macros/s/AKfycbxdR6n8YB6sfVTcqYD3pxzjS2ePtWYfqx_HNwYgtqt6jT6SXPS_nHTHhz-wNLNxIFi8-g/exec", {
+                method: "POST",
+                body: formDataPayload,
+            });
+
+            setSubmitted(true);
+            reset(); // clear form
         } catch (error) {
-          console.error("Form submission failed", error);
-          alert("Network error. Try again.");
-        } 
-      };
+            console.error("Submission error:", error);
+            alert("Network error. Try again.");
+        }
+    };
 
 
     return (
@@ -129,23 +128,46 @@ export default function WebinarLandingPage() {
             {/* Registration Form */}
             <section id="register" className="py-20 px-4 bg-white text-black flex justify-center">
                 {!submitted ? (
+                    // <motion.form
+                    //     initial={{ opacity: 0, scale: 0.9 }}
+                    //     animate={{ opacity: 1, scale: 1 }}
+                    //     onSubmit={handleSubmit}
+                    //     className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl w-full max-w-lg space-y-4"
+                    // >
+                    //     <h2 className="text-2xl font-bold text-center">🎟️ Register Now</h2>
+                    //     <Input required name="FullName" placeholder="Full Name" className="bg-white/20" onChange={handleChange} />
+                    //     <Input required name="Email" placeholder="Email" type="email" className="bg-white/20" onChange={handleChange} />
+                    //     <Input required name="Mobile" placeholder="Phone Number" className="bg-white/20" onChange={handleChange} />
+                    //     <Input required name="City" placeholder="City" className="bg-white/20 " onChange={handleChange} />
+                    //     <Input required name="State" placeholder="State" className="bg-white/20" onChange={handleChange} />
+                    //     <div className="flex items-center space-x-2">
+                    //         <Checkbox id="updates" />
+                    //         <label htmlFor="updates" className="text-sm">I’d like to receive updates</label>
+                    //     </div>
+                    //     <Button type="submit" className="w-full text-lg">✅ Submit & Reserve</Button>
+                    // </motion.form>
                     <motion.form
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        onSubmit={handleSubmit}
-                        className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl w-full max-w-lg space-y-4"
-                    >
+                        onSubmit={handleSubmit(onSubmit)} className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-xl w-full max-w-lg space-y-4">
+
                         <h2 className="text-2xl font-bold text-center">🎟️ Register Now</h2>
-                        <Input required name="FullName" placeholder="Full Name" className="bg-white/20" onChange={handleChange} />
-                        <Input required name="Email" placeholder="Email" type="email" className="bg-white/20" onChange={handleChange} />
-                        <Input required name="Mobile" placeholder="Phone Number" className="bg-white/20" onChange={handleChange} />
-                        <Input required name="City" placeholder="City" className="bg-white/20 " onChange={handleChange} />
-                        <Input required name="State" placeholder="State" className="bg-white/20" onChange={handleChange} />
-                        <div className="flex items-center space-x-2">
-                            <Checkbox id="updates" />
-                            <label htmlFor="updates" className="text-sm">I’d like to receive updates</label>
-                        </div>
-                        <Button type="submit" className="w-full text-lg">✅ Submit & Reserve</Button>
+                        <Input {...register("FullName")} placeholder="Full Name" />
+                        {errors.FullName && <p className="text-red-500 text-sm">{errors.FullName.message}</p>}
+
+                        <Input {...register("Email")} placeholder="Email" type="email" />
+                        {errors.Email && <p className="text-red-500 text-sm">{errors.Email.message}</p>}
+
+                        <Input {...register("Mobile")} placeholder="Phone Number" />
+                        {errors.Mobile && <p className="text-red-500 text-sm">{errors.Mobile.message}</p>}
+
+                        <Input {...register("City")} placeholder="City" />
+                        {errors.City && <p className="text-red-500 text-sm">{errors.City.message}</p>}
+
+                        <Input {...register("State")} placeholder="State" />
+                        {errors.State && <p className="text-red-500 text-sm">{errors.State.message}</p>}
+
+                        <Button type="submit">✅ Submit & Reserve</Button>
                     </motion.form>
                 ) : (
                     <motion.div
@@ -156,7 +178,7 @@ export default function WebinarLandingPage() {
                         <h2 className="text-2xl font-bold">🎉 You’re Registered!</h2>
                         <p>Join our WhatsApp Group for updates:</p>
                         <Button className="bg-green-500 text-white" onClick={() => window.open("https://chat.whatsapp.com/HwyQCFk38NYKjWMnCLXD5P", "_blank")}>Join WhatsApp Group</Button>
-                       
+
                     </motion.div>
                 )}
             </section>
