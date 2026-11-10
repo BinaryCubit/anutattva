@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import RazorpayButton from '@/components/RazorpayButton'
 
 const QuantumComputingCourseDetails = () => {
     return (
@@ -108,11 +109,9 @@ const QuantumComputingCourseDetails = () => {
                         </div>
                         <hr className="border-gray-300" />
 
-                        <Link href="/checkout?course=quantum">
-                            <button className="w-full mt-3 bg-purple-700 hover:bg-purple-800 text-white font-semibold py-2 rounded-xl transition">
-                                🚀 Enroll Now
-                            </button>
-                        </Link>
+                       <form action="">
+                        <RazorpayButton/>
+                       </form>
                     </div>
                 </div>
             </div>

@@ -116,7 +116,9 @@ const AimlCourse = () => {
     {/* CTA Button */}
    {/* Razorpay Button */}
 
+   <form action="">
    <RazorpayButton/>
+   </form>
   </div>
 </div>
 

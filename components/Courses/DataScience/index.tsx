@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import RazorpayButton from '@/components/RazorpayButton'
 
 const DataScienceCourseDetails = () => {
     return (
@@ -103,11 +104,9 @@ const DataScienceCourseDetails = () => {
                         </div>
                         <hr className="border-gray-300" />
 
-                        <Link href="/checkout?course=data-science">
-                            <button className="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-xl transition">
-                                🚀 Enroll Now
-                            </button>
-                        </Link>
+                        <form action="">
+                            <RazorpayButton/>
+                        </form>
                     </div>
                 </div>
             </div>
