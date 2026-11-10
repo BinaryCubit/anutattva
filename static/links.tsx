@@ -29,7 +29,7 @@ export const Headerlinks = [
 export const footerQuickLink = [
     {
         title: "FAQs",
-        link: "/faqs"
+        link: "#faqs"
     },
     {
         title: "Career",
