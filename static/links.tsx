@@ -12,6 +12,10 @@ export const Headerlinks = [
         link: "/courses"
     },
     {
+        title: "Online Courses",
+        link: "/onlie-courses"
+    },
+    {
         title: "Our Team",
         link: "/team"
     },
