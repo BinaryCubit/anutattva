@@ -41,7 +41,7 @@ export const footerQuickLink = [
     },
     {
         title: "Terms & Conditions",
-        link: "/terms"
+        link: "/terms-and-conditions"
     },
     {
         title: "Privacy Policy",
