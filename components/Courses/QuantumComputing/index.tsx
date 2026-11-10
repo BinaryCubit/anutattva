@@ -86,7 +86,7 @@ const QuantumComputingCourseDetails = () => {
 
                         <div className="flex justify-between text-gray-700">
                             <span className="font-medium">💰 Price:</span>
-                            <span>₹25,999</span>
+                            <span>₹80,000</span>
                         </div>
                         <hr className="border-gray-200" />
 

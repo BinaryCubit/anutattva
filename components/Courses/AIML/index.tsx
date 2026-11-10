@@ -80,7 +80,7 @@ const AimlCourse = () => {
     {/* Price */}
     <div className="flex justify-between text-gray-700">
       <span className="font-medium">💰 Price:</span>
-      <span>₹30,000</span>
+      <span>₹80,000</span>
     </div>
 
     {/* Divider */}
