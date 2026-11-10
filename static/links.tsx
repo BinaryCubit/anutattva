@@ -33,7 +33,7 @@ export const footerQuickLink = [
     },
     {
         title: "Career",
-        link: "/faqs"
+        link: "/career"
     },
     {
         title: "Partner With us",
