@@ -13,7 +13,7 @@ export const Headerlinks = [
     },
     {
         title: "Online Courses",
-        link: "/onlie-courses"
+        link: "/online-courses"
     },
     {
         title: "Our Team",
