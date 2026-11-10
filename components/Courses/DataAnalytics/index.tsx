@@ -93,7 +93,7 @@ const DataAnalyticsCourseDetails = () => {
 
                         <div className="flex justify-between text-gray-700">
                             <span className="font-medium">💻 Mode:</span>
-                            <span>Online (Live + Recorded)</span>
+                            <span>Offline</span>
                         </div>
                         <hr className="border-gray-200" />
 
