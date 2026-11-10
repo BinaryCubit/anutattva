@@ -200,7 +200,7 @@ export function CourseDetail({ course, email }: { course: Course; email: string 
               <p className="text-xs font-semibold uppercase tracking-wider text-blue-200">Course fee</p>
               <p className="mt-1 text-4xl font-bold">{formatFee(course.fee)}</p>
               <p className="mt-2 text-sm text-blue-100">
-                Applicable GST and other statutory taxes are charged as per prevailing laws.
+                Applicable GST and other statutory taxes are included.
               </p>
             </div>
 
