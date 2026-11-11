@@ -20,7 +20,7 @@ const CTA: React.FC = () => {
                         Intelligence, Data Science, Full Stack Development, and Quantum Computing.
                         Learn from industry experts and transform your career.
                     </p>
-                    <RazorpayButton paymentButtonId="pl_TysEJltPDImFh1" className="mt-4" />
+                   
                    
                 </div>
 
