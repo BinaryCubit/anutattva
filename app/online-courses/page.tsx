@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CourseCard, CourseDetail } from "@/components/course/CourseViews";
 import { COURSES, COURSES_META } from "@/lib/courses-content";
+import CTA from "@/components/Common/CTA";
 
 export const metadata: Metadata = {
   title: "Online Courses | Anutattva Foundation",
@@ -70,7 +71,7 @@ export default function OnlineCoursesPage() {
         ))}
       </section>
 
-      {/* Closing CTA band */}
+      {/* Closing CTA band
       <section className="bg-white">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-14 sm:flex-row sm:items-center">
           <div className="max-w-xl">
@@ -86,7 +87,8 @@ export default function OnlineCoursesPage() {
             Enroll Now
           </Link>
         </div>
-      </section>
+      </section> */}
+      <CTA/>
     </main>
   );
 }
