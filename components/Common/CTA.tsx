@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Button } from "../ui/button";
 import EnrollNow from "./EnrollNow";
+import RazorpayButton from "./RazorpayButton";
 
 const CTA: React.FC = () => {
     const [open,setOpen] = useState(false);
@@ -19,10 +20,8 @@ const CTA: React.FC = () => {
                         Intelligence, Data Science, Full Stack Development, and Quantum Computing.
                         Learn from industry experts and transform your career.
                     </p>
-                    <button>
-                    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Tys3M8IAwOkbas" async> </script> </form>
-                    </button>
-                    
+                    <RazorpayButton paymentButtonId="pl_TysEJltPDImFh1" className="mt-4" />
+                   
                 </div>
 
                 {/* Right Column - Image or Illustration */}
