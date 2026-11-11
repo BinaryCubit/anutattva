@@ -1,6 +1,7 @@
 // components/courses/CourseViews.tsx
 import Link from "next/link";
 import { formatFee, type Course } from "@/lib/courses-content";
+import RazorpayButton from "../Common/RazorpayButton";
 
 const focusRing =
   "focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2";
@@ -212,14 +213,9 @@ export function CourseDetail({ course, email }: { course: Course; email: string 
                 </div>
               ))}
             </dl>
-
+           
             <div className="space-y-3 p-6 pt-4">
-              <a
-                href={enrolHref(course, email)}
-                className={`flex w-full items-center justify-center rounded-lg bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-amber-400 ${focusRing}`}
-              >
-                Enroll Now
-              </a>
+              <RazorpayButton paymentButtonId={'pl_TysEJltPDImFh1'} className='mt-4' />
               <Link
                 href="/contact-us"
                 className={`flex w-full items-center justify-center rounded-lg border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-800 transition hover:bg-slate-50 ${focusRing}`}
