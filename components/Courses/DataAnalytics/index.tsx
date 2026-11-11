@@ -1,6 +1,7 @@
 'use client'
 
-import RazorpayButton from '@/components/RazorpayButton';
+
+import RazorpayButton from '@/components/Common/RazorpayButton';
 import Link from 'next/link';
 import React from 'react';
 
@@ -102,8 +103,8 @@ const DataAnalyticsCourseDetails = () => {
                             <span>Govt. Approved</span>
                         </div>
                         <hr className="border-gray-300" />
-
-                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TyTCVNq8WijDYf" async> </script> </form>
+ <RazorpayButton paymentButtonId={'pl_TyTCVNq8WijDYf'} className='mt-4' />
+                       
                     </div>
                 </div>
             </div>

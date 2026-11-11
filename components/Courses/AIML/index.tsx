@@ -1,8 +1,9 @@
 'use client'
 
+import RazorpayButton from '@/components/Common/RazorpayButton';
 import React from 'react'
 
-import RazorpayButton from '@/components/RazorpayButton'
+
 
 const AimlCourse = () => {
     return (
@@ -115,8 +116,8 @@ const AimlCourse = () => {
 
     {/* CTA Button */}
    {/* Razorpay Button */}
-
-   <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TyTCVNq8WijDYf" async> </script> </form>
+    <RazorpayButton paymentButtonId={'pl_TyTCVNq8WijDYf'} className='mt-4' />
+   
   </div>
 </div>
 

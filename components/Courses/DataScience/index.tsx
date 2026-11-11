@@ -2,7 +2,8 @@
 
 import React from 'react'
 import Link from 'next/link'
-import RazorpayButton from '@/components/RazorpayButton'
+import RazorpayButton from '@/components/Common/RazorpayButton'
+
 
 const DataScienceCourseDetails = () => {
     return (
@@ -104,7 +105,7 @@ const DataScienceCourseDetails = () => {
                         </div>
                         <hr className="border-gray-300" />
 
-                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TyTCVNq8WijDYf" async> </script> </form>
+                        <RazorpayButton paymentButtonId={'pl_TyTCVNq8WijDYf'} className='mt-4' />
                     </div>
                 </div>
             </div>
